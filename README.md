@@ -11,8 +11,9 @@ Let's download, extract and patch Buildroot:
 `$ make bootstrap`
 
 
-Then build:
+Then configure and build:
 
+`$ make defconfig`
 `$ make build`
 
 
