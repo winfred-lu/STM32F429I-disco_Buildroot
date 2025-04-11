@@ -1,4 +1,11 @@
-url_buildroot = https://buildroot.org/downloads/buildroot-2023.05-rc3.tar.gz
+url_buildroot_download = https://buildroot.org/downloads
+lts_release = 2025.02
+ifeq ($(lts_release),)
+	url_buildroot = $(url_buildroot_download)/buildroot-2023.05.tar.gz
+else
+	url_buildroot = $(url_buildroot_download)/buildroot-$(lts_release).tar.gz
+endif
+
 archive_buildroot = buildroot.tar.gz
 board_defconfig = stm32f429_disco_xip_defconfig
 dir_download = downloads
